@@ -39,11 +39,16 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
     const result = filterImageFromURL(image_url);
 
-    result.then((value) => {
-      console.log(value);
-      res.sendFile(value, async () => await deleteLocalFiles([value]));                
-      return res.status(200);
-    });
+    try {
+      result.then((value) => {
+        console.log(value);
+        res.sendFile(value, async () => await deleteLocalFiles([value]));                
+        return res.status(200);
+      });
+    } catch (ex) {
+      res.statusCode = 500;
+      res.send(ex.message);
+    }
   }  
   );
   //! END @TODO1
