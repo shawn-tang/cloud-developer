@@ -1,3 +1,13 @@
+# Student Note:
+/******************
+1. I use Windows OS. The build script should be: 'npm run clean && tsc && copy package.json www\package.json && cd www &&  cd ..'
+2. The kitten jpg file does not work for some reason. It throws "Error: Could not find MIME for Buffer <null>". All other urls work.
+*******************/
+GitHub: https://github.com/shawn-tang/cloud-developer.git
+
+URL:
+http://image-filter-starter-code-dev22222.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://cdn.fileinfo.com/img/ss/lg/jpg_44.jpg
+
 # Udagram Image Filtering Microservice
 
 Udagram is a simple cloud application developed alongside the Udacity Cloud Engineering Nanodegree. It allows users to register and log into a web client, post photos to the feed, and process photos using an image filtering microservice.
